@@ -1,0 +1,62 @@
+<template>
+  <div>
+    <Header />
+    <div class="container">
+      <div class="row">
+        <div class="col-6 offset-3 pt-3 card mt-5 shadow">
+          <div class="card-body">
+            <h3>Ürün İşlemleri</h3>
+            <hr />
+            <div class="form-group">
+              <label>Ürün Adı</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Ürün adını giriniz.."
+              />
+            </div>
+            <div class="form-group">
+              <label>Adet</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Ürün adetini giriniz.."
+              />
+            </div>
+            <div class="form-group">
+              <label>Fiyat</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Ürün fiyatı giriniz.."
+              />
+            </div>
+            <div class="form-group">
+              <label>Açıklama</label>
+              <textarea
+                cols="30"
+                rows="5"
+                placeholder="Ürüne ait bir açıklama giriniz..."
+                class="form-control"
+              ></textarea>
+            </div>
+            <hr />
+            <button class="btn btn-primary">Kaydet</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <Footer />
+  </div>
+</template>
+
+<script>
+import Header from "@/components/shared/Header";
+import Footer from "@/components/shared/Footer";
+export default {
+  name: "ProductPurchase",
+  components: { Footer, Header },
+};
+</script>
+
+<style scoped></style>
