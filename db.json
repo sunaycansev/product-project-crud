@@ -1,0 +1,148 @@
+{
+  "products": [
+    {
+      "title": "title",
+      "count": "13",
+      "price": "123",
+      "description": "dsadsa",
+      "id": 1
+    },
+    {
+      "title": "title",
+      "count": "213",
+      "price": "321",
+      "description": "sadfs",
+      "id": 2
+    },
+    {
+      "title": "titleee",
+      "count": "2",
+      "price": "231",
+      "description": "afsdggdf",
+      "id": 3
+    },
+    {
+      "title": "dsad",
+      "count": "2",
+      "price": "231",
+      "description": "dsadas",
+      "id": 4
+    },
+    {
+      "title": "ddsa",
+      "count": "213",
+      "price": "321",
+      "description": "dsa",
+      "id": 5
+    },
+    {
+      "title": "son",
+      "count": "1",
+      "price": "1",
+      "description": "1",
+      "id": 6
+    },
+    {
+      "title": "mikrofon",
+      "count": "10000",
+      "price": "10000",
+      "description": "sfafsafsa",
+      "id": 7
+    },
+    {
+      "title": "ben",
+      "count": "111",
+      "price": "111",
+      "description": "1111",
+      "id": 8
+    },
+    {
+      "title": "ad",
+      "count": "22",
+      "price": "22",
+      "description": "22",
+      "id": 9
+    },
+    {
+      "title": "rew",
+      "count": "33",
+      "price": "33",
+      "description": "33",
+      "id": 10
+    },
+    {
+      "title": "debugger",
+      "count": "1",
+      "price": "122222",
+      "description": "debugger",
+      "id": 11
+    },
+    {
+      "title": "object keys",
+      "count": "22",
+      "price": "22",
+      "description": "22",
+      "id": 12
+    },
+    {
+      "title": "22",
+      "count": "22",
+      "price": "22",
+      "description": "22",
+      "id": 13
+    },
+    {
+      "title": "dsadsa",
+      "count": "22",
+      "price": "22",
+      "description": "2",
+      "id": 14
+    },
+    {
+      "title": "dsad",
+      "count": "231",
+      "price": "3213",
+      "description": "213213",
+      "id": 15
+    },
+    {
+      "title": "alll",
+      "count": "222",
+      "price": "222",
+      "description": "222",
+      "id": 16
+    },
+    {
+      "title": "bunu da al ",
+      "count": "1",
+      "price": "10",
+      "description": "dasdsa",
+      "id": 17
+    },
+    {
+      "title": "son",
+      "count": "2",
+      "price": "10",
+      "description": "dsa",
+      "id": 18
+    },
+    {
+      "title": "wda",
+      "count": "21",
+      "price": "21",
+      "description": "12dsa",
+      "id": 19
+    },
+    {
+      "title": "masa",
+      "count": "1",
+      "price": "100",
+      "description": "masa",
+      "id": 20
+    }
+  ],
+  "trade-result": {
+    "purchase": 541,
+    "sale": 0
+  }
+}

@@ -13,6 +13,7 @@ import ProductList from "@/components/products/ProductList";
 
 export default {
   name: "Home",
+
   components: {
     ProductList,
     Header,

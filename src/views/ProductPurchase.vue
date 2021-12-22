@@ -10,6 +10,7 @@
             <div class="form-group">
               <label>Ürün Adı</label>
               <input
+                v-model="productData.title"
                 type="text"
                 class="form-control"
                 placeholder="Ürün adını giriniz.."
@@ -18,7 +19,8 @@
             <div class="form-group">
               <label>Adet</label>
               <input
-                type="text"
+                v-model="productData.count"
+                type="number"
                 class="form-control"
                 placeholder="Ürün adetini giriniz.."
               />
@@ -26,7 +28,8 @@
             <div class="form-group">
               <label>Fiyat</label>
               <input
-                type="text"
+                v-model="productData.price"
+                type="number"
                 class="form-control"
                 placeholder="Ürün fiyatı giriniz.."
               />
@@ -34,6 +37,7 @@
             <div class="form-group">
               <label>Açıklama</label>
               <textarea
+                v-model="productData.description"
                 cols="30"
                 rows="5"
                 placeholder="Ürüne ait bir açıklama giriniz..."
@@ -41,7 +45,7 @@
               ></textarea>
             </div>
             <hr />
-            <button class="btn btn-primary">Kaydet</button>
+            <button class="btn btn-primary" @click="saveProduct">Kaydet</button>
           </div>
         </div>
       </div>
@@ -55,6 +59,26 @@ import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
 export default {
   name: "ProductPurchase",
+  methods: {
+    saveProduct() {
+      this.$store.dispatch("saveProduct", this.productData);
+      // eslint-disable-next-line no-debugger
+      debugger;
+      // Object.keys(this.productData).forEach(
+      //   (field) => (this.productData[field] = null)
+      // );
+    },
+  },
+  data() {
+    return {
+      productData: {
+        title: null,
+        count: null,
+        price: null,
+        description: null,
+      },
+    };
+  },
   components: { Footer, Header },
 };
 </script>
