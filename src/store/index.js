@@ -47,7 +47,7 @@ export default new Vuex.Store({
     },
     getTradeResult({ commit }) {
       tradeService.getTradeResult().then((res) => {
-        console.log(res);
+        console.log("trade created", res);
         commit("SET_TRADE_RESULT", res.data);
       });
     },

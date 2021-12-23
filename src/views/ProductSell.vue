@@ -21,6 +21,7 @@
                 v-for="product in _getProducts"
                 :value="product.id"
                 :key="product.id"
+                :disabled="!(product.count > 0)"
               >
                 {{ product.title }}
               </option>
@@ -48,13 +49,16 @@
           <div class="form-group">
             <label>Adet</label>
             <input
+              v-model="productCount"
               type="text"
               class="form-control"
               placeholder="Ürün adetini giriniz.."
             />
           </div>
           <hr />
-          <button class="btn btn-primary">Kaydet</button>
+          <button :disabled="!saveEnable" class="btn btn-primary" @click="save">
+            Kaydet
+          </button>
         </div>
       </div>
     </div>
@@ -71,16 +75,50 @@ export default {
     return {
       selectedProduct: null,
       product: null,
+      productCount: null,
+      saveButtonClicked: false,
     };
   },
   methods: {
     productSelect() {
       this.product = this.$store.getters._getProduct(this.selectedProduct)[0];
     },
+    save() {
+      this.saveButtonClicked = true;
+      let product = {
+        id: this.selectedProduct,
+        count: this.productCount,
+      };
+      this.$store.dispatch("sellProduct", product);
+    },
   },
   components: { Footer, Header },
   computed: {
     ...mapGetters(["_getProducts"]),
+    saveEnable() {
+      return this.selectedProduct !== null && this.productCount > 0;
+    },
+  },
+  beforeRouteLeave(to, from, next) {
+    function beforeExit() {
+      if (
+        confirm(
+          "Kaydedilmemiş değişikler var. Çıkmak istediğinize emin misiniz ?"
+        )
+      ) {
+        next();
+      } else {
+        next(false);
+      }
+    }
+    if (
+      (this.selectedProduct !== null || this.productCount > 0) &&
+      !this.saveButtonClicked
+    ) {
+      beforeExit();
+    } else {
+      next();
+    }
   },
 };
 </script>

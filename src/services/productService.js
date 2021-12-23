@@ -11,4 +11,7 @@ export default {
   getProducts() {
     return productService.get(`/products`);
   },
+  sellProduct(id, data) {
+    return productService.patch(`/products/${id}`, { count: data });
+  },
 };

@@ -40,6 +40,24 @@ const actions = {
       router.replace("/");
     });
   },
+  sellProduct({ state, dispatch }, payload) {
+    let product = state.products.filter((el) => el.id === payload.id);
+    if (product) {
+      let totalCount = product[0].count - payload.count;
+      productService.sellProduct(product[0].id, totalCount).then(() => {
+        product[0].count = totalCount;
+
+        let tradeResult = {
+          purchase: 0,
+          sale: product[0].price,
+          count: payload.count,
+        };
+
+        dispatch("setTradeResult", tradeResult);
+        router.replace("/");
+      });
+    }
+  },
   getProducts({ commit }) {
     productService.getProducts().then(({ data }) => {
       console.log("product response =>", data);

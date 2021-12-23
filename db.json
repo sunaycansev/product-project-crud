@@ -1,218 +1,36 @@
 {
   "products": [
     {
-      "title": "title",
-      "count": "13",
-      "price": "123",
-      "description": "dsadsa",
+      "title": "Macbook pro m1",
+      "count": 9,
+      "price": "12407",
+      "description": "Apple Macbook",
       "id": 1
     },
     {
-      "title": "title",
-      "count": "213",
-      "price": "321",
-      "description": "sadfs",
+      "title": "Mouse",
+      "count": 10,
+      "price": "100",
+      "description": "Gaming Mouse",
       "id": 2
     },
     {
-      "title": "titleee",
-      "count": "2",
-      "price": "231",
-      "description": "afsdggdf",
+      "title": "Keybord",
+      "count": "5",
+      "price": "100",
+      "description": "Gaming Kebord",
       "id": 3
     },
     {
-      "title": "dsad",
-      "count": "2",
-      "price": "231",
-      "description": "dsadas",
+      "title": "Bardak",
+      "count": 0,
+      "price": "20",
+      "description": "Bardak",
       "id": 4
-    },
-    {
-      "title": "ddsa",
-      "count": "213",
-      "price": "321",
-      "description": "dsa",
-      "id": 5
-    },
-    {
-      "title": "son",
-      "count": "1",
-      "price": "1",
-      "description": "1",
-      "id": 6
-    },
-    {
-      "title": "mikrofon",
-      "count": "10000",
-      "price": "10000",
-      "description": "sfafsafsa",
-      "id": 7
-    },
-    {
-      "title": "ben",
-      "count": "111",
-      "price": "111",
-      "description": "1111",
-      "id": 8
-    },
-    {
-      "title": "ad",
-      "count": "22",
-      "price": "22",
-      "description": "22",
-      "id": 9
-    },
-    {
-      "title": "rew",
-      "count": "33",
-      "price": "33",
-      "description": "33",
-      "id": 10
-    },
-    {
-      "title": "debugger",
-      "count": "1",
-      "price": "122222",
-      "description": "debugger",
-      "id": 11
-    },
-    {
-      "title": "object keys",
-      "count": "22",
-      "price": "22",
-      "description": "22",
-      "id": 12
-    },
-    {
-      "title": "22",
-      "count": "22",
-      "price": "22",
-      "description": "22",
-      "id": 13
-    },
-    {
-      "title": "dsadsa",
-      "count": "22",
-      "price": "22",
-      "description": "2",
-      "id": 14
-    },
-    {
-      "title": "dsad",
-      "count": "231",
-      "price": "3213",
-      "description": "213213",
-      "id": 15
-    },
-    {
-      "title": "alll",
-      "count": "222",
-      "price": "222",
-      "description": "222",
-      "id": 16
-    },
-    {
-      "title": "bunu da al ",
-      "count": "1",
-      "price": "10",
-      "description": "dasdsa",
-      "id": 17
-    },
-    {
-      "title": "son",
-      "count": "2",
-      "price": "10",
-      "description": "dsa",
-      "id": 18
-    },
-    {
-      "title": "wda",
-      "count": "21",
-      "price": "21",
-      "description": "12dsa",
-      "id": 19
-    },
-    {
-      "title": "masa",
-      "count": "1",
-      "price": "100",
-      "description": "masa",
-      "id": 20
-    },
-    {
-      "title": null,
-      "count": null,
-      "price": null,
-      "description": null,
-      "id": 21
-    },
-    {
-      "title": "a",
-      "count": "1",
-      "price": "1",
-      "description": "a",
-      "id": 22
-    },
-    {
-      "title": "das",
-      "count": "22",
-      "price": "22",
-      "description": "dsa",
-      "id": 23
-    },
-    {
-      "title": "dasdasd",
-      "count": "321",
-      "price": "321",
-      "description": "dsadsa",
-      "id": 24
-    },
-    {
-      "title": "deneme",
-      "count": "2",
-      "price": "22",
-      "description": "dsa",
-      "id": 25
-    },
-    {
-      "title": "dsa",
-      "count": "2",
-      "price": "213",
-      "description": "dsa",
-      "id": 26
-    },
-    {
-      "title": "dsa",
-      "count": "22",
-      "price": "2",
-      "description": "2",
-      "id": 27
-    },
-    {
-      "title": "dsa",
-      "count": "2",
-      "price": "2",
-      "description": "dsadsa",
-      "id": 28
-    },
-    {
-      "title": "dsadsa",
-      "count": "213",
-      "price": "21321",
-      "description": "dsadsad",
-      "id": 29
-    },
-    {
-      "title": "ewaewq",
-      "count": "1",
-      "price": "12321",
-      "description": "dsadsa",
-      "id": 30
     }
   ],
   "trade-result": {
-    "purchase": 4554212,
-    "sale": 0
+    "purchase": 14107,
+    "sale": 12907
   }
 }
