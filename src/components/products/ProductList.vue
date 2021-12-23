@@ -22,7 +22,12 @@
                   <span class="badge bg-info"> {{ product.id }}</span>
                 </td>
                 <td class="align-middle text-center">{{ product.title }}</td>
-                <td class="align-middle text-center">{{ product.count }}</td>
+                <td
+                  class="align-middle text-center"
+                  :class="getCountClass(product.count)"
+                >
+                  {{ product.count }}
+                </td>
                 <td style="width: 120px">
                   {{ product.price | currencyFormat }}
                 </td>
@@ -50,6 +55,14 @@ export default {
   name: "ProductList",
   computed: {
     ...mapGetters(["_getProducts"]),
+  },
+  methods: {
+    getCountClass(count) {
+      return {
+        "bg-danger text-light": count === 0 || count === null,
+        "bg-success text-light": count > 0,
+      };
+    },
   },
 };
 </script>

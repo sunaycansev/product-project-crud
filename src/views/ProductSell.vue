@@ -12,27 +12,34 @@
           <hr />
           <div class="form-group">
             <label>Ürün Adı</label>
-            <select class="form-control">
-              <option value="1">Ürün 1</option>
-              <option value="1">Ürün 2</option>
-              <option value="1">Ürün 3</option>
-              <option value="1">Ürün 4</option>
-              <option value="1">Ürün 5</option>
+            <select
+              class="form-control mb-2"
+              v-model="selectedProduct"
+              @change="productSelect"
+            >
+              <option
+                v-for="product in _getProducts"
+                :value="product.id"
+                :key="product.id"
+              >
+                {{ product.title }}
+              </option>
             </select>
           </div>
-          <div class="card mb-2 border border-danger">
+          <div class="card mb-2 border border-danger" v-if="product !== null">
             <div class="card-body">
               <div class="row">
                 <div class="col-12 text-center">
                   <div class="mb-3">
-                    <span class="badge badge-info">Stok : 4</span>
-                    <span class="badge badge-primary">Fiyat : 100,5 TL</span>
+                    <span class="badge bg-info me-5 p-3"
+                      >Stok : {{ product.count }}</span
+                    >
+                    <span class="badge bg-primary p-3"
+                      >Fiyat : {{ product.price | currencyFormat }}</span
+                    >
                   </div>
                   <p class="border border-warning p-2 text-secondary">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Assumenda debitis deleniti eos impedit iste numquam quos
-                    sit. Dignissimos, mollitia nemo officia reiciendis
-                    repellendus rerum velit. Eos libero magnam quas tempore!
+                    {{ product.description }}
                   </p>
                 </div>
               </div>
@@ -57,9 +64,24 @@
 <script>
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
+import { mapGetters } from "vuex";
 export default {
   name: "ProductSell",
+  data() {
+    return {
+      selectedProduct: null,
+      product: null,
+    };
+  },
+  methods: {
+    productSelect() {
+      this.product = this.$store.getters._getProduct(this.selectedProduct)[0];
+    },
+  },
   components: { Footer, Header },
+  computed: {
+    ...mapGetters(["_getProducts"]),
+  },
 };
 </script>
 

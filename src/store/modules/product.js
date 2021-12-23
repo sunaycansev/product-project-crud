@@ -8,6 +8,9 @@ const getters = {
   _getProducts(state) {
     return state.products;
   },
+  _getProduct: (state) => (id) => {
+    return state.products.filter((prod) => prod.id === id);
+  },
   // _getProduct(state) {},
 };
 const mutations = {
