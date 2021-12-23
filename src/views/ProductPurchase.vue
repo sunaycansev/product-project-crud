@@ -45,7 +45,13 @@
               ></textarea>
             </div>
             <hr />
-            <button class="btn btn-primary" @click="saveProduct">Kaydet</button>
+            <button
+              :disabled="!saveEnable"
+              class="btn btn-primary"
+              @click="saveProduct"
+            >
+              Kaydet
+            </button>
           </div>
         </div>
       </div>
@@ -61,9 +67,8 @@ export default {
   name: "ProductPurchase",
   methods: {
     saveProduct() {
+      this.saveButtonClicked = true;
       this.$store.dispatch("saveProduct", this.productData);
-      // eslint-disable-next-line no-debugger
-      debugger;
       // Object.keys(this.productData).forEach(
       //   (field) => (this.productData[field] = null)
       // );
@@ -77,9 +82,43 @@ export default {
         price: null,
         description: null,
       },
+      saveButtonClicked: false,
     };
   },
+  computed: {
+    saveEnable() {
+      return (
+        this.productData.title &&
+        this.productData.price &&
+        this.productData.description
+      );
+    },
+  },
   components: { Footer, Header },
+
+  beforeRouteLeave(to, from, next) {
+    function beforeExit() {
+      if (
+        confirm(
+          "Kaydedilmemiş değişikler var. Çıkmak istediğinize emin misiniz ?"
+        )
+      ) {
+        next();
+      } else {
+        next(false);
+      }
+    }
+    if (
+      (this.productData.title !== null ||
+        this.productData.price !== null ||
+        this.productData.description !== null) &&
+      !this.saveButtonClicked
+    ) {
+      beforeExit();
+    } else {
+      next();
+    }
+  },
 };
 </script>
 

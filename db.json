@@ -139,10 +139,59 @@
       "price": "100",
       "description": "masa",
       "id": 20
+    },
+    {
+      "title": null,
+      "count": null,
+      "price": null,
+      "description": null,
+      "id": 21
+    },
+    {
+      "title": "a",
+      "count": "1",
+      "price": "1",
+      "description": "a",
+      "id": 22
+    },
+    {
+      "title": "das",
+      "count": "22",
+      "price": "22",
+      "description": "dsa",
+      "id": 23
+    },
+    {
+      "title": "dasdasd",
+      "count": "321",
+      "price": "321",
+      "description": "dsadsa",
+      "id": 24
+    },
+    {
+      "title": "deneme",
+      "count": "2",
+      "price": "22",
+      "description": "dsa",
+      "id": 25
+    },
+    {
+      "title": "dsa",
+      "count": "2",
+      "price": "213",
+      "description": "dsa",
+      "id": 26
+    },
+    {
+      "title": "dsa",
+      "count": "22",
+      "price": "2",
+      "description": "2",
+      "id": 27
     }
   ],
   "trade-result": {
-    "purchase": 541,
+    "purchase": 514,
     "sale": 0
   }
 }

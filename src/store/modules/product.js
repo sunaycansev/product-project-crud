@@ -1,4 +1,5 @@
 import productService from "@/services/productService";
+import router from "@/router";
 
 const state = {
   products: [],
@@ -19,23 +20,18 @@ const actions = {
   //   // axios işlemleri
   // },
   saveProduct({ commit, dispatch }, payload) {
-    // eslint-disable-next-line no-debugger
-    debugger;
     productService.postProduct(payload).then((res) => {
       console.log("res save product action", res);
       commit("SET_PRODUCT_LIST", res.data);
-      // eslint-disable-next-line no-debugger
-      debugger;
+
       let tradeResult = {
         purchase: payload.price,
         sale: 0,
         count: payload.count,
       };
 
-      // eslint-disable-next-line no-debugger
-      debugger;
-
       dispatch("setTradeResult", tradeResult);
+      router.replace("/");
     });
   },
   // sellProduct({ commit }, payload) {

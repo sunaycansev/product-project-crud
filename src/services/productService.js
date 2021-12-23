@@ -6,8 +6,6 @@ const productService = axios.create({
 
 export default {
   postProduct(data) {
-    // eslint-disable-next-line no-debugger
-    debugger;
     return productService.post(`/products`, data);
   },
 };

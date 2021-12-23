@@ -34,21 +34,16 @@ export default new Vuex.Store({
   },
   actions: {
     setTradeResult({ commit, state }, payload) {
-      // eslint-disable-next-line no-debugger
-      debugger;
       commit("SET_TRADE_RESULT", payload);
 
       let tradeData = {
         purchase: state.purchase,
         sale: state.sale,
       };
-      // eslint-disable-next-line no-debugger
-      debugger;
+
       tradeService.updateTradeResult(tradeData).then((res) => {
         console.log("res in trade update action", res);
       });
-      // eslint-disable-next-line no-debugger
-      debugger;
     },
     getTradeResult({ commit }) {
       tradeService.getTradeResult().then((res) => {
