@@ -8,4 +8,7 @@ export default {
   postProduct(data) {
     return productService.post(`/products`, data);
   },
+  getProducts() {
+    return productService.get(`/products`);
+  },
 };

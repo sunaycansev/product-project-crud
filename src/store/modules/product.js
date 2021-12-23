@@ -5,14 +5,17 @@ const state = {
   products: [],
 };
 const getters = {
-  // _getProducts(state) {
-  //   return state.products;
-  // },
+  _getProducts(state) {
+    return state.products;
+  },
   // _getProduct(state) {},
 };
 const mutations = {
   SET_PRODUCT_LIST(state, product) {
     state.products.push(product);
+  },
+  INIT_PRODUCT_LIST(state, payload) {
+    state.products = [...state.products, ...payload];
   },
 };
 const actions = {
@@ -34,9 +37,12 @@ const actions = {
       router.replace("/");
     });
   },
-  // sellProduct({ commit }, payload) {
-  //   // axios satış
-  // },
+  getProducts({ commit }) {
+    productService.getProducts().then(({ data }) => {
+      console.log("product response =>", data);
+      commit("INIT_PRODUCT_LIST", data);
+    });
+  },
 };
 
 export default {

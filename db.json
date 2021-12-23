@@ -188,10 +188,31 @@
       "price": "2",
       "description": "2",
       "id": 27
+    },
+    {
+      "title": "dsa",
+      "count": "2",
+      "price": "2",
+      "description": "dsadsa",
+      "id": 28
+    },
+    {
+      "title": "dsadsa",
+      "count": "213",
+      "price": "21321",
+      "description": "dsadsad",
+      "id": 29
+    },
+    {
+      "title": "ewaewq",
+      "count": "1",
+      "price": "12321",
+      "description": "dsadsa",
+      "id": 30
     }
   ],
   "trade-result": {
-    "purchase": 514,
+    "purchase": 4554212,
     "sale": 0
   }
 }
